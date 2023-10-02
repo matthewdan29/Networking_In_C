@@ -1,0 +1,9 @@
+TCP = Tranmission Control Protocol 
+
+UDP = User Datagram Protocol 
+
+UDP socket doesn't keep track of the order that the packets are sent in. 
+Given that the over head is less UDP is bested used for video streaming, multi player video games. Also UDP is used by DNS. 
+
+TCP socket is used for many protocols like HTTP, FTP, SSH, and SMTP. 
+TCP numbers the packets so that its always in order and prevents the resending of packets. 

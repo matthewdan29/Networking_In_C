@@ -1,0 +1,23 @@
+	socket() = creates and initializes a new socket. 
+
+	bind() = associates a socket with a particular local IP address and port number. 
+
+	listen() = is used on the server to cause a TCP socket to listen for new connections. 
+
+	connect() = is used on the client to set the remote address and port. IN the case of TCP, it also establishes a connection. 
+
+	accept() = is used on the server to create a new socket for an incoming TCP connection. 
+
+	send() and recvfrom() = are used to send and receive data from socets without a bound remote address. 
+
+	close()(BSD) and closesocket()(windows) = are used to close a socket. In the case of TCP, this also terminates the connection. 
+
+	shutdown() =  is used to close one side of a TCP connection. it is useful to ensure an orderly connection teardown. 
+
+	selet() = is used to wait for an event on one or more sockets. 
+
+	getnameinfo() and getaddrinfo() = provide a protocol-independent manner of working with hostnames and addressses. 
+
+	setsockopt() = is used to change some socket options. 
+
+	fctl()(BSD) and ioctlsocket()(windows) = also use to get and set some socket options. 

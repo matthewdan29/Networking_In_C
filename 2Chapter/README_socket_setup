@@ -1,0 +1,7 @@
+Before you acn use the socket API, you need to include the socket API header files. 
+These files vary depending on whether you are using Barkeley sockets or Winsock. 
+Additionally, winsock requires initialization before use. 
+It also requires that a cleanup function is called when we are finished. 
+These initialization and cleanup steps are not used in Berkely sockets. 
+
+You will use the C preprocessor to run the proper code on Windows compared to Berkeley socket system. By using the preprocessor statement, "#if defined(_WIN32)", you can include code in our program that will only be compiled on Windows. 
