@@ -1,0 +1,16 @@
+It will be useful for you to have a tcp client that can connect to any TCP server. 
+This TCP client will take in a hostname (or IP address) and port number from the command line. 
+It will attempt a connection to the TCP server at that address. 
+If successful, it will relay data that's received from that server to the terminal and data inputted into the terminal to the server. 
+It will continue until either it is terminated or the server closes the connection. 
+
+This us useful as a learning opportunity to see how to program a TCP client, but it is also useful for testing the TCP server programs that will be developed throughtout this book. 
+
+Our program first uses "getaddrinfo()" to resolve the server address from the command-line arguments. 
+Then, the socket is created with a call to "socket()". 
+The fresh socket has "connect()" called on it to connect to the server. We use "select()" to monitor for socket input. 
+"select()" also monitors for terminal/keyboard input on non-Windows systems. 
+On Windows, we use the "_khhit()" function to detect terminal input. 
+If terminal is available, we send it over the socket using "send()". 
+If "selcet()" indicated that socket data is available, we read it with "recv()" and display it to the terminal. 
+This "select()" loop is repeated until the socket is closed. 

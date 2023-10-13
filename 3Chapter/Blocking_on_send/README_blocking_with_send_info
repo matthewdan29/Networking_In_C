@@ -1,0 +1,4 @@
+In this chapter's TCP server code section, we ignored the possiblility that "send()" could block or be interrupted. 
+In a fully robust application, what we need to do is compare the return value from "send()" with the number of bytes that we tried to send. 
+If the number of bytes actually sent is less than requested, we should use "select()" to determine when the socket is ready to accept new data, and then call "send()" with the remaining data. 
+As you can imagine, this can become a bit complicated when keeping track of mulitple sockets. 

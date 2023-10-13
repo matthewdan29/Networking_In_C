@@ -1,0 +1,3 @@
+Our preferred technique for multiplexing is to use the "select()" function. 
+We can give "select()" a set of sockets, and it tells us which ones are ready to be read. 
+I can also tell us which sockets are ready to write to and which sockets have exceptions. Furthermore, it is supported by both Berkeley sockets and Winsock. Uing "select()" keeps our programs portable.
