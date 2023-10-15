@@ -1,0 +1,4 @@
+To keep things simple we will create a UDP client program that simply sends the "Hello World" string to "127.0.0.1" on port "8080". 
+Our UDP server listens on "8080". 
+It prints any data it receives, along with the sender's address and port number. 
+

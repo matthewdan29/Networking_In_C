@@ -1,0 +1,7 @@
+UDP sockets don't need the "listen()", "accept()", or "connect()" functions calls. 
+This mostly because "sendt()" and "recvfrom()" deal with the address directly. 
+For more complcated programs, we  can still use the "select()" functions to see which sockets are ready for i/o. 
+
+UDP sockets are connectionless. This is in contrast to connection-oriented TCP sockets. 
+With TCP, we had to establish a connectin before sedning data, but with UDP, we simply send individual packets directly to a destination address. 
+This keeps UDP socket programming simple, but it can complicate application protocol design, and UDP does not automatically retry commucation failures or ensure that packets arrive in order. 

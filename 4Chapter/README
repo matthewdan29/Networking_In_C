@@ -1,0 +1,9 @@
+In this chapter, we will look at how to send and receive User Datagram Protocol (UDP) packets. 
+UDP socket programming is very similar to Transmission Control Protocol (TCP) socket programing. 
+
+The following topics are covered in this chapter: 
+
+	1) The "sendto()" and "recvfrom()" functions
+	2) How "connect()" works on a UDP socket
+	3) implementing a UDP server using only one socket
+	4) Using "select()" to tell when a UDP socket has data ready

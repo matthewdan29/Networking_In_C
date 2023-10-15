@@ -1,0 +1,3 @@
+Although we've already shown a fairly full featured UDP client, "udp_client.c", 
+its worth while building a ver simple udp client. 
+This client shows only the minimal required steps to get a working UDP client, and it uses "sendto()" instead of "send()"

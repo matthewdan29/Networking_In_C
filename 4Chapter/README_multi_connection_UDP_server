@@ -1,0 +1,8 @@
+it will be useful to look at a UDP server that's been designed to service many connections. 
+The UDP socket api makes this very easy
+
+Our server begins by setting up the socket and binding to our local address. 
+It then waits to recieve data. 
+Once it has received a data string it converts the string into all uppercasse and sends it back. 
+
+Just like the TCP server. 
