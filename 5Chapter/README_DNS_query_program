@@ -1,0 +1,11 @@
+We will now implement a utility to send DNS queries to a DNS server and receive the DNS response. 
+This is a good opportunity to better understand the DNS protocol and to get experience of sending binary UDP packets. 
+We egin with a function to print a name from a DNS message. 
+
+Printing a DNS message name
+DNS encodes names in a particular way. 
+Each label is indicated by its length, followed by its text. 
+A number of labels can be repeated, and then the name is terminated with a single 0 byte. 
+If a length has its two highest bits set, then it and the next byte should be interpreted as a pointer instead. 
+We must also be aware at all times that the DNS response from the DNS server could be ill-formed or corrupted. 
+we must try to write our program in such a way that it won't crash if it receives a bad massage. 

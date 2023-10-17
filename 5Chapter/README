@@ -1,0 +1,3 @@
+Hostname resolutioin is a vital part of network programming. 
+It allows us to use simple names, such as "www.example.com", instead of addresses such as "::ffff:192.168.212.115". 
+The mechanism that allows us to resolve hostnames into IP address and IP addresses into hostnames is the Domain Name System(DNS). 

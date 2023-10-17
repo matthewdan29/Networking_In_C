@@ -1,0 +1,15 @@
+client A's DNS server is trying to resolve "www.example.com" as follows: 
+
+	1) If first connects to a root DNS server and asks for "www.example.com". 
+
+	2) The root DNS server directs it to ask the ".com" server. 
+
+	3) Our client's DNS server then connects to the server responsible for ".com" and asks for "www.example.com". 
+
+	4) The ".com" DNS server gives our server the address of another server -- The "example.com" DNS server. 
+
+	5) Our DNS server finally connects to that server and asks about the record for "www.example.com". 
+
+	6) The "example.com" server then shares the address of "www.example.com". 
+	
+	7) Our client's DNS server relays it back to our client. 

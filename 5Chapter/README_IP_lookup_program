@@ -1,0 +1,7 @@
+To demonstrate the "getaddrinfo()" and "getnameinf()" functions, we will implement a short program. 
+This program takes a name or IP address for its only argument. 
+It then uses "getaddrinfo()" to resolve that name or that IP address into an address structure, and the program prints that IP address using "getnameinfo()" fo rthe text conversion. 
+If multiple addresses are associated with a name, it prints each of them. 
+It also indicates any errors. 
+
+

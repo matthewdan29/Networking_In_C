@@ -1,0 +1,15 @@
+When a client wants to resolve a hostname into an IP address, it sends a DNS query to a DNS server. 
+This is typically done over UDP using port 53. 
+The DNS server then performs the lookup, if possible, and returns an answer. 
+If the query is too large to fit inot one UDP packet, then the query can be performed over TCP (remember TCP make sure the packets are in order and retry if failed) instead of UDP. 
+The size of the query is sent over TCP as a 16 bit value, and then the query itself is send. 
+This is called TCP fallback or DNS transport over TCP. 
+UDP works for most cases, and UDP is how DNS is used the vast majority of the time.
+
+		DNS message format 
+
+	1) Header = information about the message 
+	2) question = question for the name server
+	3) answer = answers to the question 
+	4) authority = points to other name servers 
+	5) additional = additional information.  
