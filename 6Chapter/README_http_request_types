@@ -1,0 +1,19 @@
+
+	1) "GET" is used when the client wants to download a resource. 
+
+	2) "HEAD" is just like "GET", except that the client only wants information about the resource instead of the resource itself. 
+
+	3) "POST" is used when the client needs to send information to the server. 
+	Your web broswer typically uses a "POST" request when you submit an online form, for example posting a commint on a social media site. 
+
+	4) "PUT" is used to send a document to the seb server.
+
+	5) "DELETE" is rarely used. trust me your server DB will have triggers
+
+	6) "TRACE" is used to request diagnostic information from web proxies. 
+
+	7) "CONNECT" is sometimes used to initiate an HTTP connection throught a proxy server. 
+
+	8) "OPTIONS" is used to ask which HTTP request types are supported by the server for a given resource. 
+
+/*IF you send a request that the web server doesn't support, then the server should respond with a "400 BAD REQUEST" code*/

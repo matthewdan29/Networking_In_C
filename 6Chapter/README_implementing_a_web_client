@@ -1,0 +1,4 @@
+Now implementing a HTTP web client. 
+This client takes as input a URL. 
+It then attempts to connect to the host and retrieve the resource given by the URL
+The program displays the HTTP headers that are sent and received, and it attempts to parse out the requested resource content from the HTTP response. 

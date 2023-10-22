@@ -1,0 +1,5 @@
+An HTTP "POST" request sends data from the web client to the web server. 
+Unlike an HTTP "GET" request, a "POST" request includes a body containing data. 
+
+The "POST" body format can vary, and it should be indentified by a "Content-Type" header. 
+Many modern, web-best APIs expect a "POST" body to be JSON encoded. 

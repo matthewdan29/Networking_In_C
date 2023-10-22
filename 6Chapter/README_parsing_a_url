@@ -1,0 +1,5 @@
+"web_get.c" is a C function to parse a given URL. 
+The function takes as input a URL, and it returns as output the hostname, the port number, and the document path. 
+To avoid needing to do manual memory management, the outputs are returned as pointers to specific parts of the input URL. 
+The input URL is modified with terminating NULL pointers as required. 
+This program is useful for debugging. 
