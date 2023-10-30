@@ -1,0 +1,2 @@
+The SMTP sending client will take as inputs: the destination email server, the recipient's address, the sender's address, the email subject line, and the email body text. 
+

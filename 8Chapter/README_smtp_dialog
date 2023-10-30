@@ -1,0 +1,14 @@
+SMTP is a text-based TCP protocol that works on port 25. 
+
+In a typical session, the dialog goes as follows: 
+1) The client first establishes a connection to the SMTP server. 
+2) The server initiates with a greeting. This greeting indicates that the server is ready to receive commands. 
+3) The client then issues it own greetings. 
+4) The server responds. 
+5) The client sends a command indicating who the mail is from. 
+6) The server responds to indicate that the sender is accepted. 
+7) The client issues another command, which specifies the mail's recipietn. 
+8) The server responds indicating the recipient is accepted. 
+9) The client then issues a "DATA" command. 
+10) The server responds asking the client to proceed. 
+11) the client transfers the email.
