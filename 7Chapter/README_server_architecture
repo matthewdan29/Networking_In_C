@@ -1,0 +1,16 @@
+An HTTP server is a complicated program. 
+It must handle multiple simultaneous connections, parse a complex text-based protocol, handle malformed requests with the proper error, and serve files. 
+We benefit from breaking the program down into separate functions and data structures. 
+
+At the global level, our programs stores a linked list of data structures. 
+This linked list conatins one separate data structures for each connected client. 
+We implement many helper functions that work on this global linked list. 
+These functions are used to add new clients, drop clients, wait on client data, look up clients by their socket, serve files to clients and send error messages to clients. 
+
+It waits for new connections or new data.
+When new data is received, it checks whether the data consists of a complete HTTP request. 
+If a complete HTTP request is received the server attempts to send the reaquested resources 
+If the HTTP request is malformed or the resource cannot be found, then the server sends an error message to the connected client instead. 
+
+The server is also responsible for telling the client the content type of each resource it sends. 
+

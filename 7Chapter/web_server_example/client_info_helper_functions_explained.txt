@@ -1,0 +1,12 @@
+"get_client()" takes a "SOCKET" variable and searches our linked list for the corresponding "client_info" data structure. 
+
+"drop_client()" closes the connection to a client and removes it from the "clients" linked list. 
+
+"get_client_address()" returns a client's IP address as a string (char pointer arry)
+
+"wait_on_clients()" uses the "select()" function to wait until either a client has data available or a new client is atempting to connect. 
+
+"send_400()" and "send_404()" are used to handle HTTP error conditions. 
+
+"serve_resource()" attempts to transfer a file to a connected client. 
+
