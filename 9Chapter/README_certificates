@@ -1,0 +1,5 @@
+Each HTTPS server uses one or more certificates to verify their identity. 
+This certificate must either be turted by the client itself or trusted by a third party that the client trusts. 
+In common usages, such as web browsers, it's not really possible to list all trusted certificates. 
+For this reason , it's most common to validate certificates by verifying that a trusted third party trusts them. 
+This is proven using digital signatures. 

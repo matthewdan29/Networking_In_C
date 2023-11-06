@@ -1,0 +1,7 @@
+Server Name Indication (SNI). 
+SNI is a technique that, when used by TLS, requires the client to indicate to the server which domain it is attempting to connect to. 
+The server can then find a matching certificate to use the TLS connection.
+
+It should be noted that SNI involves sending the unencrypted domain name over the network. 
+This means an eavesdropper can see which host the client is connecting to, even though they wouldn't know which resources the client is requesting from that host. 
+Newer protocols, such as Encrypted Server Name Identification (ESNI), address this problem but not widely deployed yet. 

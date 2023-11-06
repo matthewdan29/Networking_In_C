@@ -1,0 +1,16 @@
+
+	1) Authentication: Need a way to prevent imposters from posing as legitimate communication partners.
+TSL provides peer authentication methods for this reason. 
+
+	2) Encryption: TLS uses encryption to obfuscate transmitted data. 
+This prevents an eavesdropper from correctly interpreting intercepted data. 
+
+	3) Integrity: TLS also ensures that received data has not been tampered with or otherwise forged. 
+
+HTTP is most commonly used to transmit web pages. 
+The text on a web page is first encoded as Hypertext Markup Language (HTML). 
+HTML provides formatting, layout, and styleing to web pages. 
+HTTP is then used to transmit the HTML, and HTTP itself is transmitted over TCP connection. 
+
+TLS works inside TCP to provide a secure communication channel. 
+HTTPS is then basically the same as the HTTP protocol, but it is sent inside a TLS channel. 

@@ -1,0 +1,1 @@
+Next build is a simple HTTPS client. This client can connect to a given HTTPS web server and request the root document '/'. 
