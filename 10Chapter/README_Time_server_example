@@ -1,0 +1,3 @@
+time_server.c will serve the time over plain HTTP. 
+it will use TLS and OpenSSL for secure connection. 
+This is an example of a production grade website. 

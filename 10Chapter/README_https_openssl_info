@@ -1,0 +1,5 @@
+Generally, HTTPS connections are first made using TCP sockets. 
+Once the TCP connection is established, OpenSSL is used to negotiate a TLS connection over the open TCP connection. 
+From that point forward, OpenSSL functions are used to send and received data over the TLS connection. 
+
+TLS uses certificates to prevent against connecting to imposters and man in the middle attacks. 

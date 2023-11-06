@@ -1,0 +1,14 @@
+Certificates signed by recognized authorities are essebtial to establish the chain of trust needed for public websites. 
+It is much easier to obtain a self-signed certificate for testing or development. 
+It is also acceptable to use a self-signed certificate for certain private applications where the client can be deployed with a copy of the certificate, and trust only that certificate. 
+This is called certificate pinning. 
+When used properly certificate pinning can be more secure than using a certificate authority. 
+It is not appropriate for public-facing websites. 
+
+I'm using a self-signed certificate because they are the eaisest to obtain. 
+The downside to this method is that web browsers won't trust our server. 
+We can get around this by clicking throught a few warnings in the web browser. 
+
+OpenSSL make it easier not easy
+
+$"openssl req -x509 -newkey rsa:2048 -nodes -sha256 -keyout key.pem \ -out cert.pem -days 365"  

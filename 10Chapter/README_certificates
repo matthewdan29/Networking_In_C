@@ -1,0 +1,7 @@
+Certificates are an important part of the TLS protocol. 
+Althought certificates can be used on both the client and server side, HTTPS generally only uses server certificates. 
+These certificates identify to the client that they are connected to a trusted server. 
+
+Without vertificates, a client wouldn't be able to tell whether it was connected to the intended server or an impostor server. 
+
+Certificates work using a chain of trust model. 
