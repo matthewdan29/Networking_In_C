@@ -1,0 +1,11 @@
+SSH provides authentication methods for both the server and the client. 
+It should be obvious why the server must authenticate the client. 
+The server wants to only provide access to authorized users. 
+Otherwise, anyone could take over the server. 
+
+In SSH, servers are authenticated using public key encryption. 
+this is very similar to how HTTPS provides server authentication, 
+SSH doesn't typically rely on certificate authorities. 
+When using ssh, most clients simply keep a list of the public keys that they trust. 
+How the client obtain this list in the first place varies. 
+If a client connects to a server under trusted circumstances, then it can trust that public key in the future too (generally). 

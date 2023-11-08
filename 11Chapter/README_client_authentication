@@ -1,0 +1,11 @@
+SSH offers several methods of client authentication. 
+
+	1) No authentication: This allows any user to connect 
+
+	2) Password authentication: This requires the user to provide a username and password 
+
+	3) Public key: this uses public key encryption methods to authenticate 
+
+	4) keyboard-interactive: this authenticates by having the user answer several prompts 
+
+	5) generic security service application program ingerface (GSS-API): this allows authentication through a variety of other services. 

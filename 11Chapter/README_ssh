@@ -1,0 +1,8 @@
+SSH uses strong encryption to protect against eavesdropping. 
+SSH allows clients to verify servers identities using public-key authentication. 
+Without public-key authentication of the server, an imposter oculd masquerade as a legitimate server and attempt to trick a client into connecting. 
+Once connected, the client would send its credentails to the imposter server. 
+
+SSH also provides many methods for client authentication with servers. 
+These include sending a password or using public-key authentication. 
+
