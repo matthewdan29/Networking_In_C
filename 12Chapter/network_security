@@ -1,0 +1,11 @@
+Firewalls come in two types: software and hardware. 
+Most operationg systems provide software firewalls now. 
+Software firewalls are typically configured to deny incoming connections unless a rule is set up to allow it explicitly. 
+
+It is also possible to configure software firewalls to deny outgoing traffic by default. 
+Programs aren't allowed to establish new connections unless a specific rule is added to the firewal configuration firt. 
+
+Hardware firewalls come with various capabilityes. 
+Often they are configured to block any incoming connections that don't match predefined rules. 
+On networks without firewalls, routers often implicitly serve this same purpose. 
+If your router provides network address translation (NAT), then it wouldn't even know what to do with an incoming connection unless a port forwarding rule has been pre-established for it. (remember TCP clients have to connect first but UDP servers can just send out data)

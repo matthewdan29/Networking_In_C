@@ -1,0 +1,10 @@
+If you pass "tshark" the "-x" flag, it displays an ASCII and hex dump of every packet captured. 
+
+It's often more practical to capture packets to a file and do the analysis later. 
+The "-w" option is used to capture packets to a file. 
+You may also want to use the "-c" option to limit the number of packets captured. 
+This simple precaution protects against accidentally filling you entire hard drive(or vm valume lol) with network traffic. 
+
+"-i 5 -w capture.pcap -c 50 tcp and port 80" with the given of "5" in the example meaning what interface you wanted to use tshark is asked to capture 50 packets to a file by the name of of "capture.pcap" 
+
+

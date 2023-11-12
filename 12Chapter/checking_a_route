@@ -1,0 +1,19 @@
+				Traceroute
+
+While Ping can tell you whether a network path exits between twon systems, traceroute can reveal what this path actually is. 
+Think of a graph and every router is a vertex and the dx/dy of the distance is the edge (This way of thinking leads into GPS systems and that where you should be going). 
+In such you can be able to locate anyone with a computer at anytime with the right way of thinking. 
+
+Traceroute is used with on argument: the hostname or address you want to map a route to. 
+
+On Windows, traceroute is called tracert. 
+Tracert works in the same way as found on other OS
+
+The traceroute utility uses TTL to identify intermediate routers in a network. 
+Trace route begins by addressing a message to the destination host. 
+However, traceroute sets the TTL field to a value of 1. 
+When the very first router in the connection path receives this message, it decrements TTL to zero. 
+The router then realize that the message has expired and discards it. 
+A well-behaved router then sends an ICMP Time Exceeded message back to the original sender. 
+Traceroute uses this Time Exceeded message to identify the first router in the connection. 
+

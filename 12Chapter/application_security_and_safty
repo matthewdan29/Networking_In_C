@@ -1,0 +1,17 @@
+When programming in C, special consideration must be given to security. 
+This is because C is a low-level programming language that gives direct access to system resources. 
+Memory managment, for example, must be done manually in C, and a mistake in memory managment could allow a network attacker to write and execute arbitrary code. 
+
+With C, it is vital to ensure that allocated memory buffers aren't written past the end. 
+This is, whenever you copy data from the network into memory, you must ensure that enough memory was allocated to store the data. 
+If you program misses this even once, it potentially allows a window for an attacker to gain control of your program. 
+
+Memory mamngment, from a security perspective, isn't a concern with many higher level programing languages. 
+
+If you're implementing a C program intended to run as a server, you should employ a defense in depth approach. 
+That is, you should set up your program in such a manner that multiple defenses must be overcome before an attacker could cause damage. 
+meaning no bugs no super users in the program that isn't tightly controlled or trusted/tested. 
+
+Remember C is low level and you can create almost anything you want. 
+Thats why its the choice to build OS and the most important technologies being used. 
+Also why you run into lots of problems if you don't use the carpteners rule to check x2 and cut once. 

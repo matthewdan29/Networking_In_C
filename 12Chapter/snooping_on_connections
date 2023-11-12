@@ -1,0 +1,12 @@
+			Getting data sent and receiving data. 
+
+	1) TCPDUMP is a commonly used program for packet capture on Unix-based systems.  
+	2) Wireshark is a very popular network protocol analyzer that includes a GUI. wireshark is under the GNU GPL licence, and is on many platforms
+
+You first need to decide which network interfaces you want to use to capture traffic. 
+The desired interface or interfaces are passed to tshark with the "-i". 
+You can listen to all interfaces by passing "-i any" 
+Tshark lists the available interfaces with the "-D" flag. 
+If you want to capute only traffic to or from the IP address "0.0.0.0" you will use the "-i host 0.0.0.0" filter.
+Tshark filters also support the Boolean operators "and" "or" and "not". 
+

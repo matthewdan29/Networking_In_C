@@ -1,0 +1,13 @@
+Netstat is useful to know what connections are being made on your local machine. 
+Running "$ netstat -n" prevents netstat from doing reverse-DNS lookups on each address and has the effect of speeding it up significantly. 
+
+"netstat -nt" on linux shows open TCP connections
+
+The queue information, displayed on Unix-based systems, represents how many bytes the kernel has queued up wating for the program to read, or the number of bytes sent but not acknowledged by the foreign host. 
+Samll numbers are ok, but if these numbers became large, it could indicate a problem with the network or a bug in the program. 
+
+It is also useful to see which program is responsible for each connection. 
+"-p" on unix based systems and "-o" on windows. 
+"netstat -ntlp" shows listening TCP server sockets, including the program name
+
+

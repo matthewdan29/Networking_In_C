@@ -1,0 +1,4 @@
+				Ping 
+
+Ping uses the Internet Control Message Protocol (ICMP) to check whether a host is reachable. 
+It als commonly reports the total round-trip time (latency). 

@@ -1,0 +1,21 @@
+Network monitoring is a common IT term that is broad implication. 
+Network Monitoring can refer to the pracetice, techniques, and tools used to provide insight into the status of a network. 
+These techniques are used to monitor the availability and performance of network systems and troubleshoot problems. 
+
+Some reason you may want to practice network monitoring include (But not limited to)
+
+	1) To detect the reachablility of networked systems. 
+
+	2) TO measure the availability of networked systems. 
+
+	3) to determine the performance of networked systems. 
+
+	4) To inform decisions about networked resource allocation 
+
+	5) To aid in troubleshooting 
+
+	6) To benchmark performance 
+
+	7) To reverse engineer a protocal 
+
+	8) To debug a program 

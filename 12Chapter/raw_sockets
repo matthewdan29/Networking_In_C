@@ -1,0 +1,6 @@
+The socket programming API does provide access to raw sockets, in theory. 
+With raw sockets, a C program can construct the exact IP packet to send. 
+That is a C programmer could construct an ICMP packet from scratch and send it over the network. 
+Raw sockets also allow for programs to receive uninterpreted packets from the network directly. 
+In this case, the user program would be responsible for deconstructing and interpreting the ICMP packet, not the operating system. 
+
