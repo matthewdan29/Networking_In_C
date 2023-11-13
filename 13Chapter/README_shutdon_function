@@ -1,0 +1,13 @@
+If you want to close your sending channel, but still leave the option for receiving more data, you should buse the "shutdonw()" function instead. 
+THe "shutdonw()" function takes two parameters. 
+The first parameter is a socket, and the second is an "int" indicating how to shut down the socket. 
+
+"shutdown()" supports three options closing the sending side of a connection, closing the receiving side, and closing both sides. 
+However, the TCP protocol itself doesn't reflect these options, and it is rarly usedful to use "shutdown()" for closing the receiving side (unless your having the client send some data to the server about the stat/condition the device is in weil, before, and during the conversation)
+
+the cond to shutdonw the sending channel of a socket in a cross-platform manner method is below. 
+
+	if (shutdown(my_socket, 1) /* 1 = SHUT_WR, SD_SEND */)
+	{
+		fprintf(stderr, "shutdonw() failed. (%d)\n", GETSOCKETERRNO()); 
+	}

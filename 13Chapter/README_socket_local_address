@@ -1,0 +1,4 @@
+It is possible to use "bind()" on the client side to associate a socket with a particular address and port. (think of how you social media application on your phone knows where to send data and how to expect the data from that social media company that has a exacutable on your phone.)
+It is sometime usefule to use "bind()" in this manner on machines that have multiple network interfaces. 
+The use of "bind()" can allow the selection of which network address to use for the outgoing connection. 
+

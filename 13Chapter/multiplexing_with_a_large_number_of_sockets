@@ -1,0 +1,2 @@
+The "select()" function is great because itis available on many platforms but you might want to use "poll()" if the "FD_SETSIZE" marco reaches its limit. 
+

@@ -1,0 +1,32 @@
+When designing application protocols and writing network code, we need to be careful to prevent a deadlock state. 
+A deadlock is when both sides on a connection are waiting for the other side to do something. 
+The worst case scenario is when both sides end up waiting indefinitely. 
+
+When data is sent over a TCP connection, this data is broken up into segments. 
+A few segments are sent immediately, but additional segments aren't sent over the network until the first few segments are acknowledged as being received by the connected peer. 
+This is part of the TCP's flow control scheme, and it helps to prevent a sender from transmetting data faster than a receiver can handle. 
+This is the TCP flow-control mechanism that ensures that the sender isn't transmitting faster than the receiver can handle. 
+
+Keep in mind that a TCP socket can send only a limited amount of data before requiring acknowledgment of receipt, imagine what happens if both parties to a TCP connection try to send a bunch of data at the same time. 
+Both parties send the first few TCP segments. 
+They both then wait until their peer acknowledges receipt before sending more. 
+If neither party is reading data, then neither party acknowledges receiving data. 
+This is a deadlock state. 
+Both parties are stuck waiting forever. 
+
+One procedure to send a large amount of data 
+
+	1) Call "send()" with your remaining data
+	
+	2) The return value of "send()" indicates how many bytes were actually caonsumed by "send()".
+	   if fewer bytes were sent than yo intended, then your next call to "send()" should be used to transmit the remainder. 
+
+	3) Call "select()" with your socket in both the read and write sets. 
+
+	4) If "select()" indicates that the socket is ready to be read from, call "recv()" on it and handle the received data as needed. 
+
+	5) if "select()" indicates that the socket is ready to write to again, go to step 1 and call "send()" with the remaining data to be sent. 
+
+
+The important point is that calls to "send()" are interspersed with calls to "recv()". 
+In this way, we can be sure that no data is lost, and this deadlock condition does not occur. 

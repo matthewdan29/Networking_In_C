@@ -1,0 +1,10 @@
+TCP also implements congestion control methods as part of a network congrestion-avoidance schemem. 
+While flow control is vital to prevent overwhelming the reciever, congestion control is essential to prevent overwhelming the network. 
+
+One way TCP congesstion control works is by allowing only a limited amount of data to be sent before pausing to wait for an acknowledgment of receipt. 
+This data limit is decreased when network congestion is detected. 
+
+Another way TCP implements congestion control is through the TCP slow start algorithm. 
+This method provides a way for TCP to ramp up a connection to its full potential, instead of immediatly dumping a lot of data on the network all at once. 
+
+ 

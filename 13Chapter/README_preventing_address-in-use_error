@@ -1,0 +1,15 @@
+Your TCP server has one or more open connections, and then you terminate it. 
+You restart the server, but the call to "bind()" fails with an "EADDRINUSE" or "WSAEADDRINUSE" on windows error. 
+
+As long as on of the connections that was terminated hanging on it prevents any new process from calling "bind()" on the same local port and address. 
+
+This failure of the "bind()" call can be prevented by setting the "SO_REUSEADDR" flag on the server socket before calling "bind()"
+
+	int yes = 1; 
+	if (setsockopt(my_socket, SOL_SOCKET, SO_REUSEADDR, (void*)&yes, sizeof(yes)) < 0)
+	{
+		fprintf(stderr, "setsockopt() failed. (%d)\n", GETSOCKETERRNO()); 	
+	}
+
+Once the "SO_REUSEDADDR" flag is set, "bind()" succeeds even if a few "TIME-WAIT"  connections are still hanging on to the same local port and address. 
+

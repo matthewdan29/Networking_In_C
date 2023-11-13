@@ -1,0 +1,27 @@
+Error handling can be a problematic topic in C as it does not "hold the progammer's hand it more like sour cream on puerto rican food". 
+Any memory or resources allocated must be manually released, and this can be tricky to get exactly right in every situation. 
+
+When a networked program encounters an error or unexpected situation, the normal program flow is interrupted. 
+This is made doubly diffcult when designing a multiplexed system that handles many connections concurrently. 
+
+Sometimes, you can get away with merely having client program terminate after encountering an error. 
+This behavior is often the correct response for simple command-line utilities. 
+At other times, you may need to have your program automatically try again. 
+
+
+Event-driven programming can provide the techniques needed to simplify this logic a bit. 
+Maninly, your program is structured so that a data structure is allocated to store information about each connection. 
+Your program uses a main loop that checks for events, such as a readable or writable socket, and then handles those events. 
+When strucuring your program in this way it is often easier to flag a connection as needing an action, rather than calling a function to process that action immediately. 
+
+With carful design, errors can be handled as a simple matter of course, instead of as exceptions to the normal program flow. 
+
+Error handling is a very specialzed process, and careful care needs to be taken to consider application requirements.
+What's appropriate for one system is not necessarily correct for another. 
+
+A robust program design dictates that you carefully consider how to handle error. 
+Many programmers foucs only on the happy path. 
+That is, they take care to design the program flow based on the assumption that everything goes correctly. 
+For robust programs, this is a mistake. 
+It is equally important to consider the program flow in cases where everything goes wrong. 
+

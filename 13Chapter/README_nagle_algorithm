@@ -1,0 +1,28 @@
+One techneque used by TCP increase efficientcy is the Nagle alogorithm. 
+The Nagle algorithm works to make the sender pool small amounts of data together until it has enough to justify sending. 
+
+Consider seding just one byte of data over a TCP connection. 
+Each TCP segments uses 20 bytes to transmit TCP bookkeeping. 
+An additional 20 bytes are needed for the IPv4 header. 
+This 1 bytes of application data becomes 41 byteson the network. 
+That is overhead of 4000% and we are not even coounting th overhead from lower layers. 
+
+The Nagle algorithm states that one small unacknowledged TCP segment may be outstanding at any given time. 
+A small segment is considered any segment less than the Maximum Segment Size (MSS) 
+
+In some applications, you really do need to send a small packet follewed by another small packet immediatly after. 
+In a real-time multiplayer video game, you can't queue up player commands; they must be sent continuously. 
+It makes sense to disable the Nagle Algorithm for reduced latency, at the expense of becreased bandwith efficiency. 
+
+Disabling the Nale algorithm can be done using the "setsockipt()" function. 
+ 	int yes = 1; 
+	if (setsockopt(my_socket, IPPROTO_TCP, TCP_NODELAY, (void*)&yes, sizeof(yes)) < 0)
+	{
+		fprintf(stderr, "setsockopt() failed. (%d)\n", GETSOCKETERRNO()); 
+	}
+
+Althought the Nagle algorithm often works well to improve network utilization, not understanding how it works can leas to problems 
+In addition to Nagle algorithm, TCP implements many other methods to limit the needless waste of network resources. 
+Sometimes, these other methods work poorly with one another. 
+The delayed ACK is one such method that can work badly with the Nagle algorithm. 
+

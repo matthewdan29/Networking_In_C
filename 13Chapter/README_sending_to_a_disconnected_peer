@@ -1,0 +1,12 @@
+the 3 basic ways a TCP connection can fail.
+
+	1) network outage 
+	2) The peer application crashes 
+	3) The peer's system crashes 
+
+If you use "send()" on a socket that your peer thinks is closed, that peer will respond with an RST message. 
+This state is easily detacted by the return value of "recv()". 
+
+A more serious issue to consider is what happens when "send()" is called on a socket that has already received an RST message from its peer. 
+On Unix-based systems the defualt is to send a "SIGPIPE" signal to your program. 
+if you don't handle this signal the operating system will terminate your program 

@@ -1,0 +1,10 @@
+Some TCP stacks implement a delayed acknowledgment method to reduce network congestion. 
+This technique works by delaying the acknowledgment of received data. 
+The hope is that the receiver is going to send a response very soon anyway, and that the acknowledgment can piggyback on this response. 
+When it works, which is often, it conservers bandwidth. 
+
+Now, Consider combining the Nagle algorithm with delayed acknowledgment. 
+If the client transmits its request in two small messages, then the sending channel is blocked for not only the round trip time. 
+It is also blocked for the additional acknowledgment delay time. 
+
+

@@ -1,0 +1,41 @@
+The standard TCP three-way handshake sonsist of three parts. 
+First, the client sends a Synchronize (SYN) message to the server. 
+Then the server responds with an SYN Message of its own, combined with an Acknowledge (ACK) message of the Client's SYN Message. 
+The client then responds with an acknowledgement of the Server's SYN Message. 
+The connection is then open and ready for data transmission. 
+
+Wehn the "connect()" function is called on the Client side, the first SYN Message is sent, and the "connect()" function blocks until the SYN+ACK message is received from the Server. 
+After the SYN+ACK Message is received, "connect()" enqueues the final ACK Messae and returns. 
+
+This means that "connect()" blocks for at least one round-trip network time. 
+That is, it blocks from the time that its SYN Message is sent to the time that the SYN+ACK Message is received. 
+WHile one round trip is network time is the best-case scenario, in the worst case, it could block for much longer. 
+Consider what happens when an overloaded Server receives an SYN Message. 
+The Server could take som time to reply with the SYN+ACK Message. 
+
+If "connect()" cannot establish a connection successfully (that is, SYN+ACK Message is never received), then the "connect()" call eventually times out. 
+This timeout period is controlled by the OS. 
+The exact timeout period varies, but 20 is about typical. 
+
+"select()" can be used to wait on multiple "connect()" calls, and other socket events besides. 
+It can work well for a client that needs to connect to several servers in parralel. 
+
+Using "select()" to timeout a "connect()" call involves a few steps. 
+
+	1) Set the socket to non-blocking. 
+	   This done using "fcntl(O_NONBLOCK)" on Unix-based systmes and "ioctlsocket(FIONBIO)" on windows. 
+
+	2) Call "connect()". 
+	   This call returns immediately, provided that step 1 was successful 
+
+	3) Check the return code from "connect()". 
+	   A return value of zero indicates that the connection was successful,  which probably indicates that non-blocking mode was set incorrectly. 
+	   A non-zero return value from "connect()" means we should check the error (that is, "WSAGetLastError()" on Windows and "errno" on other platforms)
+	  An error code of "EINPROGRESS" (WSAEWOULDBOLOCK on windos) indicats that the TCP connection is in progress. 
+	  Any other value indicates an actual error. 
+	
+	4) Set up and call "select()" with the sesired timeout. 
+
+	5) set the socket back to blocking mode. 
+
+	6) check to see whether the socket sonnected successfully

@@ -1,0 +1,22 @@
+TCP connections ar full-duplex. 
+This means that the data being sent is independent of the data being received. 
+Data is sent and received simultaneously. 
+This also implies that the connection must be closed by both sides before it is truly disconnected. 
+To close a TCP connection, each side sends a Finish (FIN) message and receiveds and ACK message from their peer. 
+
+The exact tear down process, from the perspective of each peer, dependson whether it sent a FIN first, or received a FIN first. 
+THere are three basic connection tear donw cases. 
+
+	1) You initiated the tear down by sending the first FIN message. 
+
+	2) You received a FIN mesage from your connection peer. 
+	
+	3) you and your peer send FIN messages simultaneously
+
+In case 3, where both sides send a FIN message simultaneously, each side thinks that it is in case 1. 
+That is each side thinks it has sent the first FIN message, and each side tears down its socket as in case 1. 
+This is pretty rare, but certainly possible.
+
+The TCP connection stat transitions on the initiator are "ESTABLISHED", "FIN-WAIT-1", "FIN-WAIT-2", "TIME-WAIT", and "CLOSED". 
+The TCP connection stat transitions on the receiveing peer are "ESTABLISHED", "CLOSE-WAIT", "LAST-ACK", and "CLOSED". 
+  
