@@ -1,0 +1,8 @@
+Field-Programmable Gate Arrays (FPGA) are integrated circuits containing arrays of programmable locgic blocks.
+These logic blocks can be programmed and combined to implement complex functions. Essentially, any logic that an Application-Specific Integrated Circuit (ASIC) can perfrom can also be don on an FPGA. 
+
+FPGAs are useful for highly demanding processing tasks requiring real time guarantees, especially tasks that benefit from highly-parallel processing. 
+A video-processing algorithm that is too demanding for a single board computer, much less a microcomtrollor may be trivaial fro FPGA. 
+
+FPGAs are programmed using Hardware Description Languages (HDL). 
+The two most common languages uses are Verilog and VHSIC hardware Description Language (VHDL). 

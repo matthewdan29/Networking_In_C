@@ -1,0 +1,5 @@
+Many IoT devices collect lots of data as part of their operations. 
+A smart thermostat collects temperature data about its enviroment. 
+This is required for it to function. 
+This data may seem harmless at first glance, but once you consider how people use smart thermostats, you realize that the data is more important than it first appears. 
+

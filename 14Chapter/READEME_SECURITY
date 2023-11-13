@@ -1,0 +1,21 @@
+According to the Open Web Application Security Project (OWASP), the top ten IoT security problems are
+
+	1) Weak, guessable, or hardcoded passwords. 
+	
+	2) Insecure network services 
+
+	3) Insecure ecosystem interfaces
+
+	4) Lack of secure update mechanism 
+
+	5) Use of inseucre or outdated components 
+
+	6) Insufficient privacy protection
+
+	7) Insecure data transfer and storage
+
+	8) Lack of device managment 
+
+	9) insecure default settings 
+
+	10) Lack of phsical hardening 

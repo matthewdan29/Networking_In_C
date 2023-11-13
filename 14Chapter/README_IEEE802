@@ -1,0 +1,6 @@
+IEE 802.15.4 is a technical stnadard for low rate wireless personal area networks (LR-WPAN). 
+The standard was first defined in 2003 andit provides the foundation that other protocols are all basedon the IEEE 802.15.4 standard.
+
+A mesh network topology is common in IEEE 802.15.4 based setups. 
+This allows devices remote from the hub to communicate throught closer devices. 
+ 

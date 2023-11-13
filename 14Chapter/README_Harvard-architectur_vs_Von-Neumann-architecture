@@ -1,0 +1,7 @@
+The Von Neumann Architecture, which dominates the desktop processor market, memory stores both data and insturction. 
+this necessitates that processor instructions are the same width as the data they are processing. 
+Harvard architecture machines, by contrast, use completely separte memories to store instructions and data. 
+It is common for Harvard architecture microcontroller to use different word sizes for instructions compared to data. 
+For example, a 16-bit Harvard architecture microcontroller may process data in 16 bit words, but its instructions could be encoded as 24-bit words. 
+While data is stored in RAM, instructions are read directly from non-volatile memory, such as FLASH or EEPROM. 
+

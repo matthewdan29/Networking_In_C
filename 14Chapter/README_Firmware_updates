@@ -1,0 +1,10 @@
+IoT devices are connected to the internet, and this gives us an advantage for product updates. 
+When new functionality or bug fixes are developed, we can use the internet to push updates to our IoT devices. 
+
+This process is easy when using an SBC. 
+you just push the udate as you would for any software. 
+
+If your product uses a microcontroller or FPGA, then thing get a bit more complicated. 
+Your device will need to download a firmware image, and then transfer that into non-volatile memory as required. 
+
+FIRST, it is essential for security that any firmware update is authenticated. 

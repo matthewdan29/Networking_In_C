@@ -1,0 +1,6 @@
+Most IoT devices work by sending their data to a the cloud. 
+These servers process and store the IoT device data and allow remote access and configuration. 
+
+The few protocol standards aimed specifically for IoT devices, such as Constrained Application Protocol (CoAP) and Message Queuing Telemetry Transport (MQTT). 
+
+Custom designed TCP and UDP protocols are also common. 
